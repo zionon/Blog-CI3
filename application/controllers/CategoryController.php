@@ -2,6 +2,7 @@
 //无限级分类
 class CategoryController extends MY_Controller
 {
+	//增加分类
 	public function categoryCreate() {
 		$this->load->library('form_validation');
 		$this->load->model('CategoryModel', 'cm');
@@ -15,12 +16,14 @@ class CategoryController extends MY_Controller
 		}
 	}
 
+	//分类列表
 	public function categoryList() {
 		$this->load->model('CategoryModel', 'cm');
 		$data['tree'] = $this->cm->getTree();
 		$this->load->view('categoryList', $data);
 	}
 
+	//修改分类
 	public function categoryUpdate($id) {
 		$this->load->library('form_validation');
 		$this->load->model('CategoryModel', 'cm');
@@ -35,6 +38,7 @@ class CategoryController extends MY_Controller
 		}
 	}
 
+	//分类删除
 	public function categoryDelete($id) {
 		$this->load->model('CategoryModel', 'cm');
 		$this->cm->delete($id);
