@@ -1,17 +1,16 @@
 <?php
 class PostController extends MY_Controller
 {
+	//日志列表
 	public function postList(){
 		$this->load->model('PostModel','pm');
 		$data = $this->pm->search();
-
 		$this->load->model('CategoryModel', 'cm');
 		$data['tree'] = $this->cm->getTree();
-		// var_dump($data['data']->result());die;
-		// var_dump($data['page']);die;
 		$this->load->view('postList', $data);
 	}
 
+	//新建日志
 	public function postCreate() {
 		//验证表单
 		$this->load->library('form_validation');
@@ -26,6 +25,7 @@ class PostController extends MY_Controller
 		}
 	}
 
+	//修改日志
 	public function postUpdate($id) {
 		$this->load->model('PostModel','pm');
 		$this->load->model('CategoryModel', 'cm');
@@ -34,7 +34,6 @@ class PostController extends MY_Controller
 		if ($this->form_validation->run('post') === FALSE) {
 			$data = $this->pm->find($id);
 			$data['tree'] = $this->cm->getTree();
-			// var_dump($data);die;
 			$this->load->view('postUpdate', $data);
 		} else {
 			$this->pm->update();
@@ -42,16 +41,17 @@ class PostController extends MY_Controller
 		}
 	}
 
+	//日志删除
 	public function postDelete($id) {
 		$this->load->model('PostModel', 'pm');
 		$this->pm->delete($id);
 		redirect(site_url('PostController/postList'));
 	}
 
+	//日志详情
 	public function postDetail($id) {
 		$this->load->model('PostModel','pm');
 		$data = $this->pm->find($id);
-		// var_dump($data);die;
 		$this->load->view('postDetail', $data);
 	}
 }
