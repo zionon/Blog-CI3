@@ -10,7 +10,6 @@
         <h2>登  录</h2>
 
         <form id="login-form" class="form-horizontal" action="<?=site_url('WelcomeController/login')?>" method="post">
-    <!--         <input type="hidden" name="_csrf" value="R3RlbnIwVW8VWQc8E0M6MHQ/IiQteyM5KD4QXAoAAAAWRC8AEAQsNg=="> -->
             <div class="form-group field-loginform-username required">
                 <label class="col-lg-1 control-label" for="loginform-username">用户名:</label>
                 <div class="col-lg-3">
@@ -48,10 +47,6 @@
                     </p>
                 </div>
             </div>
-<!--             <div class="form-group field-loginform-rememberme">
-                <div class="col-lg-offset-1 col-lg-3"><input type="hidden" name="LoginForm[rememberMe]" value="0"><input type="checkbox" id="loginform-rememberme" name="LoginForm[rememberMe]" value="1" checked> <label for="loginform-rememberme">Remember Me</label></div>
-                <div class="col-lg-8"><p class="help-block help-block-error"></p></div>
-            </div> -->
             <div class="form-group">
                 <div class="col-lg-offset-1 col-lg-11">
                     <button type="submit" class="btn btn-primary">登录</button>            

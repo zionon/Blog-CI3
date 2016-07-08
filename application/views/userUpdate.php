@@ -47,22 +47,6 @@
 
 					<div class="help-block"></div>
 				</div>				
-		<!-- 		<div class="form-group field-post-tags">
-				<label class="control-label" for="post-tags">标签</label>
-				<textarea id="post-tags" class="form-control" name="Post[tags]" rows="6"></textarea>
-
-				<div class="help-block"></div>
-				</div> -->
-		<!-- 		<div class="form-group field-post-status required">
-				<label class="control-label" for="post-status">状态</label>
-				<select id="post-status" class="form-control" name="Post[status]">
-				<option value="1">草稿</option>
-				<option value="2">已发布</option>
-				<option value="3">已归档</option>
-				</select>
-
-				<div class="help-block"></div>
-				</div> -->
                 <div class="form-group field-contactform-verifycode">
                     <label class="control-label" for="contactform-verifycode">验证码:</label>
                     <div class="row">

@@ -35,29 +35,6 @@
 
 				<div id="comments">
 					<div id="comments-list"></div>
-<!-- 					<div class="alert alert-danger alert-dismissible fade in" role="alert">
-				      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-				      <h4>谢谢您的回复，我会尽快审核后将其展现出来！</h4>
-						<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <em>hj:</em>
-						<p>u 很健康很健康</p>
-						<span class="glyphicon glyphicon-time" aria-hidden="true"></span> <em>2016-06-28 23:37:32</em>	
-				    </div> -->
-					<!-- <h5><?=count($comment)?>条评论</h5> -->
-<!-- 					<?php foreach ($comment as $value): ?>
-						<div class="comment">
-							<div class="row">
-							  <div class="col-md-12">
-								  <div class="comment_detail">
-								  <p class="bg-info">						  
-								  	<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <em><?=$value['author']?>:</em>							
-								    <br><?=$value['content']?><br>
-								  	<span class="glyphicon glyphicon-time" aria-hidden="true"></span> <em><?=date('Y-m-d H:i:s', $value['create_time'])?></em>	
-								  </p>
-								  </div>
-							  </div>
-							</div>
-						</div>
-					<?php endforeach ?> -->
 
 					<ul class="pagination" id="comment-pagination">
 
@@ -95,7 +72,6 @@
 							</div>							
 						    <div>
 						        <input type="button" value="提交评论"  class="comment_btn btn btn-success" />
-<!-- 						        <button type="submit" class="comment_btn btn btn-success">发 布</button>  -->  
 						    </div>					    
 					    </form>
 					</div>
@@ -338,18 +314,3 @@ function closeReplay() {
 }
 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -29,14 +29,6 @@
 					<th>邮  箱</th>
 					<td><?=$email?></td>
 				</tr>
-<!-- 				<tr>
-					<th>标签</th>
-					<td>Yii2,视频教程,教程</td>
-				</tr>
-				<tr>
-					<th>状态</th>
-					<td>草稿</td>
-				</tr> -->
 				<tr>
 					<th>注册时间</th>
 					<td><?=date('Y-m-d H:i:s',$register_time)?></td>

@@ -41,7 +41,6 @@
 								<option value="2" <?php if($status == 2) echo 'selected="selected"'; ?> >已审核</option>
 								</select>
 							</td>
-<!-- 							<td><input type="text" name="ReplySearch[update_time]" class="form-control" value="<?=$this->input->get('ReplySearch[update_time]')?>"></td> -->
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -75,7 +74,6 @@
 					<input type="submit" value="确定审核"  class="reply_btn btn btn-success" data-confirm="确定要审核吗?" />
 				</div>
 			</form>
-				<!-- <input type="button" value="提交评论"  class="reply_btn btn btn-success" />	    -->
 				<ul class="pagination">
 					<?=$page?>
 				</ul>

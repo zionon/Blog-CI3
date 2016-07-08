@@ -22,10 +22,6 @@
 	    <div class="container">
 
 		    <div class="navbar-header">
-<!-- 			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w1-collapse"><span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span></button> -->
 				<a class="navbar-brand" href="<?=site_url('welcome/index')?>">CodeIgniter博客</a>
 			</div>
 			<div id="w1-collapse" class="collapse navbar-collapse">
