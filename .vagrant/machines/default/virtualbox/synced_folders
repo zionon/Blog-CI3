@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/hao/blog":{"guestpath":"/home/hao/blog","hostpath":"/Applications/XAMPP/xamppfiles/htdocs/Blog-CI3","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Applications/XAMPP/xamppfiles/htdocs/Blog-CI3","disabled":false,"__vagrantfile":true}}}
