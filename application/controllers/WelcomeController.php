@@ -62,10 +62,17 @@ class WelcomeController extends CI_Controller {
 		if ($this->form_validation->run('register') === FALSE) {
 			$this->load->view('register');
 		} else {
-			// var_dump($this->input->post());die;
 			$this->load->model('UserModel','um');
-			$this->um->create();
-			echo "注册成功";
+			$data = $this->um->create();
+			if ($data) {
+				$sessionData = array(
+					'id' => $data['id'],
+					'username' => $data['username'],
+				);
+				$this->session->set_userdata($sessionData);
+				$this->session->set_tempdata($sessionData, NULL, 50000);
+				echo '<p>测试注册成功，页面被宝宝带走了</p><hr /><button><a href="'.site_url('welcome').'">回主页吧</a></button>';
+			}
 		}
 	}
 

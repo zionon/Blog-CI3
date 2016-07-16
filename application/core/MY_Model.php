@@ -19,7 +19,7 @@ class MY_Model extends CI_Model
 			}
 		}
 		//插入数据库
-		$this->db->insert($this->_tableName,$data);
+		$this->db->insert(strtolower($this->_tableName),$data);
 		//获取新插入的记录的ID
 		$data['id'] = $this->db->insert_id();
 		//添加后的钩子函数
