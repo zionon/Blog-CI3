@@ -4,3 +4,6 @@
 */cache/*
 !*/cache/index.html
 !*/cache/.htaccess
+.vagrant/*
+error/*
+Vagrantfile
