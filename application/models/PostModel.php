@@ -32,10 +32,10 @@ class PostModel extends MY_Model
 		if ($cat_id) {
 			$this->db->where('ci_post.cat_id', $cat_id);
 		}
-		//内容
-		// $content = $this->input->get('PostSearch[content]');
+		//作者
+		// $author = $this->input->get('PostSearch[author]');
 		// if ($content) {
-		// 	$this->db->like('content',$content);
+		// 	$this->db->like('ci_user.username',$author);
 		// }
 		//制作翻页
 		$count = $this->db->count_all_results('', FALSE);
@@ -217,7 +217,7 @@ class PostModel extends MY_Model
 		$data = array();
 		$this->_tableName = ucfirst($this->_tableName);
 		$this->db->where('id',$this->input->post("$this->_tableName[id]"));
-		$oldTags = $this->db->select('tags')->get($this->_tableName);
+		$oldTags = $this->db->select('tags')->get(strtolower($this->_tableName));
 		$oldTags = $oldTags->result()[0]->tags;
 		$oldTags = explode(',', $oldTags);
 		// var_dump($oldTags);die();
@@ -232,7 +232,7 @@ class PostModel extends MY_Model
 		}
 		//更新数据库
 		$this->db->where('id', $this->input->post("$this->_tableName[id]"));
-		$ret = $this->db->update($this->_tableName,$data);
+		$ret = $this->db->update(strtolower($this->_tableName),$data);
 		//更新后的钩子函数
 		$newTags = array_diff(explode(',', $data['tags']), $oldTags);
 		// var_dump($newTags);die;

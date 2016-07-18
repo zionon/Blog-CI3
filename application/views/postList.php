@@ -26,8 +26,6 @@
 							<th style="width: 10%">
 							<a <?php if($odby['key'] == 'username') echo $odby['odbyString']; else echo 'href="'.site_url('PostController/postList?sort=username').'" data-sort="username"'; ?> >作者</a>
 							</th>
-			<!-- 				<th><a href="" data-sort="tags">标签</a></th>
-							<th><a href="" data-sort="status">状态</a></th> -->
 							<th>
 							<a <?php if($odby['key'] == 'update_time') echo $odby['odbyString']; else echo 'href="'.site_url('PostController/postList?sort=update_time').'" data-sort="update_time"'; ?> >修改时间</a>
 							</th>
@@ -35,14 +33,13 @@
 							<th>分类</th>							
 							<th>状态</th>
 							<th>添加时间</th>
-							<!-- <th>作者</th> -->
 							<th class="action-column">操作</th>
 						</tr>
 
 						<tr id="w0-filters" class="filters">
 							<td><input type="text" class="form-control" name="PostSearch[id]" value="<?=$this->input->get('PostSearch[id]')?>"></td>
 							<td><input type="text" class="form-control" name="PostSearch[title]" value="<?=$this->input->get('PostSearch[title]')?>"></td>
-							<td><input type="text" class="form-control" name="PostSearch[content]" value="<?=$this->input->get('PostSearch[author_id]')?>"></td>
+							<td><input type="text" class="form-control" name="PostSearch[author_id]" value="<?=$this->input->get('PostSearch[author_id]')?>"></td>
 							<td><input type="" name="" class="form-control"></td>
 							<td><input type="text" name="PostSearch[tags]" class="form-control" value="<?=$this->input->get('PostSearch[tags]')?>"></td>
 							<td>
@@ -68,10 +65,8 @@
 								<option value="3" <?php if($status == 3) echo 'selected="selected"'; ?> >已归档</option>
 								</select>
 							</td>
-						<!-- 	<td><input type="text" class="form-control" name="PostSearch[tags]"></td>
-							<td><input type="text" class="form-control" name="PostSearch[status]"></td> -->
 							<td>&nbsp;</td>
-							<td>&nbsp;</td><!-- <td>&nbsp;</td><td>&nbsp;</td> --><!-- <td>&nbsp;</td> -->
+							<td>&nbsp;</td>
 						</tr>
 					</thead>
 					<tbody>
@@ -100,10 +95,6 @@
 				</table>
 				<ul class="pagination">
 					<?=$page?>
-<!-- 					<li class="prev disabled"><span>&laquo;</span></li>
-					<li class="active"><a href="/blog2/web/index.php?r=post%2Findex&amp;page=1&amp;per-page=8" data-page="0">1</a></li>
-					<li><a href="/blog2/web/index.php?r=post%2Findex&amp;page=2&amp;per-page=8" data-page="1">2</a></li>
-					<li class="next"><a href="/blog2/web/index.php?r=post%2Findex&amp;page=2&amp;per-page=8" data-page="1">&raquo;</a></li> -->
 				</ul>
 			</div>
     	</div>
