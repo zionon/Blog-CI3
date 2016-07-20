@@ -3,7 +3,7 @@ class PostModel extends MY_Model
 {
 	protected $_tableName = 'post';
 	protected $_insertFields = array('title','status','tags','cat_id');
-	protected $_updateFields = array('title','content','status','tags','cat_id');
+	protected $_updateFields = array('title','status','tags','cat_id');
 
 	public function search($perpage = 10) {
 		$this->db->from($this->_tableName);
@@ -224,6 +224,7 @@ class PostModel extends MY_Model
 		foreach ($this->_updateFields as $value) {
 			$data[$value] = $this->input->post("$this->_tableName[$value]",TRUE);
 		}
+		$data['content'] = $this->input->post('Post[content]');
 		//更新前的钩子函数
 		if (method_exists($this,'_before_update')) {
 			if ($this->_before_update($data) === FALSE) {

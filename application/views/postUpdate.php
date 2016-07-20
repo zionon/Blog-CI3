@@ -40,8 +40,6 @@
 
 				<div class="form-group field-post-content required">
 					<label class="control-label" for="post-content">内容</label>
-					<!-- <textarea id="post-content" class="form-control" name="Post[content]" rows="6"><?=set_value('Post[content]')?></textarea> -->
-					<!-- <textarea id="editor" name="Post[content]" placeholder="Hello world" autofocus></textarea> -->
 					<textarea id="textarea1" name="Post[content]" style="height: 400px">
 						<p><?=set_value('Post[content]', $content)?></p>
 					</textarea>
@@ -89,7 +87,7 @@
 <script type="text/javascript" src="<?=_PUBLIC?>/wangEditor-2.1.13/dist/js/wangEditor.min.js"></script>
 <script type="text/javascript">
 	var editor = new wangEditor('textarea1');
-	editor.config.uploadImgUrl = 'http://www.blog.com/public/wangEditor-2.1.13/uploadfiles/upload.php';
+	editor.config.uploadImgUrl = "<?=site_url('PostController/uploadImage')?>";
 	editor.config.uploadImgFileName = 'file'
 	editor.create();
 </script>
