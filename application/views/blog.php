@@ -114,10 +114,11 @@
 		$(data.data).each(function(key,value){
 			//拼标签
 			var tagshtml = "";
-			$(value.tags).each(function(key1,value1){
-				tagshtml += '<span class="glyphicon glyphicon-tag" aria-hidden="true"></span><a href="">'+value1+'</a>';
-			});
-            html += '<div class="post-id" data-key="'+value.id+'"><div class="post"><div class="title"><h2><a href="/welcome/detail?id='+value.id+'">'+value.title+'</a></h2><div class="author"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <em>'+value.create_time+'&nbsp;&nbsp;&nbsp;&nbsp;</em><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <em>'+value.username+'</em></div></div><br /><div class="content">'+value.content+'</div><br /><div class="nav">'+tagshtml+'<br/><a href="/index.php/welcome/detail?id='+value.id+'">评论 ('+data.num[value.id]+')</a> |最后修改于 '+value.update_time+'</div></div><hr /></div>'
+			console.log(value.tags);
+			// $(value.tags).each(function(key1,value1){
+			// 	tagshtml += '<span class="glyphicon glyphicon-tag" aria-hidden="true"></span><a href="javascript:void(0)" onclick="ajaxGetTagPost(1,'.$ajaxTag.','.$id.')">'+value1+'</a>';
+			// });
+            html += '<div class="post-id" data-key="'+value.id+'"><div class="post"><div class="title"><h2><a href="/welcome/detail?id='+value.id+'">'+value.title+'</a></h2><div class="author"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <em>'+value.create_time+'&nbsp;&nbsp;&nbsp;&nbsp;</em><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <em>'+value.username+'</em></div></div><br /><div class="content">'+value.content+'</div><br /><div class="nav">'+tagshtml+'<br/><a href="/welcome/detail?id='+value.id+'">评论 ('+data.num[value.id]+')</a> |最后修改于 '+value.update_time+'</div></div><hr /></div>'
 		});
 		//放到页面中覆盖原数据
 		$("#postList").html(html);

@@ -16,6 +16,11 @@ $config = array(
             'label' => '必须选择状态',
             'rules' => 'required'
         ),
+        array(
+            'field' => 'Post[tags]',
+            'label' => '标签',
+            'rules' => 'required'
+        )
     ),
 
     'comment' => array(
